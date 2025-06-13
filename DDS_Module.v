@@ -22,7 +22,7 @@ module DDS_Module(
     always @(posedge clk or negedge resetn) begin 
         if(!resetn) begin
             Accm <= 24'b0;
-            FCW  <= 24'd671088;
+            FCW  <= 24'd16384;
         end
         else begin 
             Accm <= Accm + FCW;

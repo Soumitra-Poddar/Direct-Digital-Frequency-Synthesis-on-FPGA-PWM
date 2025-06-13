@@ -14,13 +14,10 @@ module DDS_tb();
     always #10 clk = ~clk;
     
     initial begin 
-        clk = 1'b0;
+        clk    = 1'b0;
         resetn = 1'b0;
-        #200
+        end
+        initial
+        #10 resetn = 1'b1;
         
-        resetn = 1'b1;
-        #1000
-        
-        $finish;
-    end
 endmodule

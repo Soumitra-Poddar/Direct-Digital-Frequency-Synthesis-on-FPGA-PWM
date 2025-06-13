@@ -3,10 +3,11 @@
 module Top(
     input  clk, 
     input  resetn,
+    output [15:0] Sine_out, Tri_out,
     output PWM
     );
     
-    wire [15:0] Sine_out, Tri_out;
+//    wire [15:0] Sine_out, Tri_out;
     
     DDS_Module inst1 (
     .clk(clk),
